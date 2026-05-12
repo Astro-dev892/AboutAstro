@@ -1,15 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Astro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astro Home</title>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="background:black;color:white;text-align:center;font-family:Arial;">
+<body>
 
-  <h1>Astro is Live 🚀</h1>
-  <p>If you see this, GitHub Pages is working.</p>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="logo">ASTRO</div>
 
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#bank">RocketPay</a>
+    </nav>
+  </header>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="hero">
+    <h1>Welcome to Astro</h1>
+    <p>A connected ecosystem of devices and secure banking.</p>
+    <button onclick="document.getElementById('products').scrollIntoView()">
+      Explore
+    </button>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="section">
+    <h2>Products</h2>
+
+    <div class="grid">
+      <div class="card">A-Pods</div>
+      <div class="card">A-Phone</div>
+      <div class="card">A-Tab</div>
+      <div class="card">A-TV</div>
+    </div>
+  </section>
+
+  <!-- ROCKETPAY PREVIEW -->
+  <section id="bank" class="section">
+    <h2>RocketPay</h2>
+    <p>Secure digital banking system inside Astro.</p>
+
+    <button onclick="alert('Go to login below')">
+      Open Banking
+    </button>
+
+    <hr>
+
+    <input id="username" placeholder="Username">
+    <input id="pin" type="password" placeholder="PIN">
+
+    <button onclick="register()">Create Account</button>
+    <button onclick="login()">Login</button>
+
+    <input id="toUser" placeholder="Send to user">
+    <input id="amount" type="number" placeholder="Amount">
+
+    <button onclick="sendToUser()">Send Money</button>
+
+    <h3 id="balance">Balance: $0</h3>
+
+    <div id="history"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="text-align:center;padding:20px;opacity:0.6;">
+    © 2026 Astro Ecosystem
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
