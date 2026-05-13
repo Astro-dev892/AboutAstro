@@ -172,3 +172,26 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+.card {
+  background: rgba(22,27,34,0.75);
+
+  border: 1px solid rgba(88,166,255,0.25);
+
+  color: white;
+}
+
+.nav {
+  backdrop-filter: blur(16px);
+}
+
+background:
+radial-gradient(circle at top left,
+rgba(88,166,255,0.15),
+transparent 35%),
+
+radial-gradient(circle at bottom right,
+rgba(31,111,235,0.15),
+transparent 35%),
+
+#0d1117;
+
